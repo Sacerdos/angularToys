@@ -7,7 +7,7 @@ table td, th  {
 }
 
 .create-button  {
-    color: blue;
+    color: green;
     cursor: pointer;
     padding: 5px;
 }

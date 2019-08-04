@@ -6,7 +6,7 @@ app.controller("ToyController", function($scope, $http) {
  
     $scope.toys = [];
     $scope.toyForm = {
-        toyID: 4,
+        toyID: -1,
         toyName: "",
         toySize: "",
         toyDescription: ""

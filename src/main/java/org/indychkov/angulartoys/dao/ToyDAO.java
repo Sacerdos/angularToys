@@ -18,9 +18,9 @@ public class ToyDAO {
     }
 
     private static void initEmps() {
-        Toy toy1 = new Toy(1L, "E01", "Smith", "Clerk");
-        Toy toy2 = new Toy(2L, "E02", "Allen", "Salesman");
-        Toy toy3 = new Toy(3L, "E03", "Jones", "Manager");
+        Toy toy1 = new Toy(1L, "Chicco Robochicco", "Middle", "The first tranformable remote control for pre-school kids.");
+        Toy toy2 = new Toy(2L, "Disney Princess Petite Princess N Pony Ariel", "Small", "Royal Fun with your Favorite Petite Princess and Pony;Princess and Pony can share their Hair and Accessories");
+        Toy toy3 = new Toy(3L, "Real Workin' Buddy Mr. Hosey Super Spray Fire Truck Vehicle Toy", "Middle", "Blast water up to 30 feet! Help mom water the garden or spray your friends! Real Workin Buddies: Mr. Hosey is the farthest water blasting firetruck in the market. Fill Mr. Hosey up with water, pump his bumper to pressurize the tank then spray! There are two ways to use the fire hose; spray with the hose attached to the firetruck or detach the 2 foot hose to free spray.");
 
         toyMap.put(toy1.getToyID(), toy1);
         toyMap.put(toy2.getToyID(), toy2);
