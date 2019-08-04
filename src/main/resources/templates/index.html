@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+
+    <script th:src="@{/main.js}"></script>
+    <link th:href="@{/main.css}" rel="stylesheet" />
+
+    <head>
+<body ng-app="ToyManagement" ng-controller="ToyController">
+<h3>
+    CRUD
+</h3>
+<form ng-submit="submitToy()">
+    <table border="0">
+        <tr>
+            <td>Toy Id</td>
+            <td><input type="text" ng-model="toyForm.toyID" /></td>
+        </tr>
+        <tr>
+            <td>Toy Name</td>
+            <td><input type="text" ng-model="toyForm.toyName" /></td>
+        </tr>
+        <tr>
+            <td>Toy Size</td>
+            <td><input type="text" ng-model="toyForm.toySize"  /></td>
+        </tr>
+        <tr>
+            <td>Toy Description</td>
+            <td><input type="text" ng-model="toyForm.toyDescription" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Submit" class="blue-button" />
+            </td>
+        </tr>
+    </table>
+</form>
+<br/>
+<a class="create-button" ng-click="createToy()">Create Toy</a>
+<table border="1">
+    <tr>
+        <th>Toy ID</th>
+        <th>Toy Name</th>
+        <th>Toy Size</th>
+        <th>Toy Description</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <!-- $scope.employees -->
+    <tr ng-repeat="toy in toys">
+        <td> {{ toy.toyID }}</td>
+        <td> {{ toy.toyName }}</td>
+        <td >{{ toy.toySize }}</td>
+        <td >{{ toy.toyDescription }}</td>
+        <td>
+            <a ng-click="editToy(toy)" class="edit-button">Edit</a>
+        </td>
+        <td>
+            <a ng-click="deleteToy(toy)" class="delete-button">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
